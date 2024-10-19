@@ -1,23 +1,43 @@
 package Round2.Assignment;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        int[] a = {2, 4, 6, 8, 9, 10, 12};
-        int[] b = {2, 4, 6, 8, 10, 12};
-        System.out.println(findExtraElement(a, b));
+
+        int[] arr = {3, 0, 1};
+        System.out.println(missingNumber(arr));
     }
 
-    static int findExtraElement(int[] arr1, int[] arr2) {
-        int left = 0;
-        int right = arr1.length - 1;
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            if (arr1[mid] == arr2[mid]) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
+    public static int missingNumber(int[] nums) {
+        int num = nums.length;
+        System.out.println(num);
+        int sum = (num * (num + 1)) / 2;
+        System.out.println(sum);
+        int totalSumofArr = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
         }
-        return arr1[left];
+        return sum - totalSumofArr;
+
     }
+
+//    static void rotate(int[] arr, int tar) {
+//        tar = tar % arr.length;
+//        reverse(arr, 0, arr.length - 1);
+//        reverse(arr, tar, arr.length - 1);
+//        reverse(arr, 0, tar - 1);
+//    }
+//
+//    static void reverse(int[] arr, int start, int end) {
+//        while (start <= end) {
+//            int temp = arr[start];
+//            arr[start] = arr[end];
+//            arr[end] = temp;
+//            start++;
+//            end--;
+//        }
+//    }
+
+
 }
