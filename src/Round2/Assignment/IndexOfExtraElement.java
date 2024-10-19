@@ -4,7 +4,7 @@ public class IndexOfExtraElement {
     public static void main(String[] args) {
         int[] arr1 = {3, 5, 7, 9, 11, 13};
         int[] arr2 = {3, 5, 7, 11, 13};
-        System.out.println(optimzedSolution(arr1, arr2));
+        System.out.println(optimizedSolution(arr1, arr2));
 //        for (int i = 0; i < arr1.length; i++) {
 //            if (arr1[i] != arr2[i]) {
 //                System.out.println(i);
@@ -14,7 +14,7 @@ public class IndexOfExtraElement {
 
     }
 
-    static int optimzedSolution(int[] arr1, int[] arr2) {
+    static int optimizedSolution(int[] arr1, int[] arr2) {
         int low = 0;
         int high = arr2.length;
         while (low <= high) {
